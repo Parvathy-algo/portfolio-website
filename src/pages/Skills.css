@@ -1,0 +1,140 @@
+/* Container Frame adjustments */
+.skills-container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.skills-header {
+  margin-bottom: 3rem;
+  text-align: left;
+  /* Animates the headers fading in together smoothly */
+  animation: skillHeaderFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.skills-tagline {
+  color: #10b981;
+  font-family: monospace;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.skills-title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0.5rem 0;
+  letter-spacing: -1.5px;
+}
+
+.skills-subtitle {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+/* --- THE GRID & ANIMATION CONTROLS --- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Premium Charcoal Card UI elements */
+.skills-card {
+  background: linear-gradient(145deg, #131a26 0%, #0d121b 100%);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 2.2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  
+  /* Smoothly interpolates structural changes */
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease;
+
+  /* Staggered load mechanism: uses index variable to set incremental delays */
+  animation: cardEntranceSlide 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: calc(var(--card-index) * 0.15s);
+}
+
+/* Premium Interactivity: Lift and Ambient Green Aura Glow */
+.skills-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 
+              0 0 40px rgba(16, 185, 129, 0.1);
+}
+
+.skills-group-title {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  transition: color 0.3s ease;
+}
+
+.skills-card:hover .skills-group-title {
+  color: #34d399; /* Title shifts to bright green on box focus */
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+/* Mini Interactive Skill Pills */
+.skill-badge {
+  background: rgba(16, 185, 129, 0.05);
+  color: #a7f3d0; /* Soft White-Green hue baseline */
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  padding: 0.45rem 1rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Individual Pill Hover State */
+.skill-badge:hover {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399; /* Radiant full emerald */
+  border-color: rgba(16, 185, 129, 0.4);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.15);
+}
+
+/* --- KEYFRAME ENGINE --- */
+@keyframes skillHeaderFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardEntranceSlide {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-title { font-size: 3rem; }
+  .skills-grid { grid-template-columns: 1fr; }
+}

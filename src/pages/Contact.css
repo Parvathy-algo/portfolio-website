@@ -1,0 +1,161 @@
+/* Core Internal Container Frame */
+.contact-section-inner {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 2-Column Responsive Layout Matrix */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Balanced layout spacing split */
+  gap: 4rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* --- Left Column Info Styling --- */
+.contact-text-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-tagline {
+  color: #10b981;
+  font-family: monospace;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.contact-title {
+  font-size: 3.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0.5rem 0 1.5rem 0;
+  letter-spacing: -1.5px;
+}
+
+.contact-subtitle {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.contact-direct-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #cbd5e1;
+}
+
+.info-item a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.info-item a:hover {
+  color: #10b981;
+}
+
+.info-icon {
+  background: rgba(16, 185, 129, 0.1);
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  font-size: 1.1rem;
+}
+
+/* --- Right Column Form Fields Styling --- */
+.contact-form-side {
+  width: 100%;
+}
+
+.premium-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.form-group label {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Beautiful Glow-on-focus input bars */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem 1.2rem;
+  background: rgba(3, 7, 18, 0.6) !important; /* Deep contrast backdrop mask */
+  border: 1px solid rgba(16, 185, 129, 0.2) !important;
+  border-radius: 14px;
+  color: #ffffff !important;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Focus highlighting */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #10b981 !important;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+  background: rgba(3, 7, 18, 0.8) !important;
+}
+
+/* Fully Integrated Premium Interactive Button */
+.contact-submit-btn {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  color: #ffffff !important;
+  border: none;
+  padding: 1.1rem 2rem;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
+  margin-top: 0.5rem;
+  width: 100%; /* Stretches button evenly across bottom line footprint */
+}
+
+.contact-submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+}
+
+.contact-submit-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Responsive Adaptive viewports breakdown adjustment mapping scale */
+@media (max-width: 968px) {
+  .contact-grid {
+    grid-template-columns: 1fr; /* Collapses form side neatly underneath text column on small tabs */
+    gap: 3rem;
+  }
+  .contact-title {
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,103 @@
+/* --- 1. GLOBAL ROOT RESET & BACKDROP CONFIG --- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #030712; /* Deep background layer */
+  /* Premium radial glowing gradients ambient mesh flares */
+  background-image: 
+    radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 15% 75%, rgba(5, 150, 105, 0.05) 0%, transparent 50%);
+  background-attachment: fixed;
+  font-family: 'Inter', sans-serif;
+  color: #f3f4f6;
+  overflow-x: hidden;
+}
+
+/* --- 2. UNIFIED SEAMLESS SCROLL FRAME --- */
+.portfolio-app {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* We apply the glassmorphism properties directly to this main wrapper container.
+   This removes the horizontal separating gaps completely!
+*/
+.scroll-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 1140px;
+  margin: 100px auto 4rem auto; /* Top spacing accounts cleanly for your floating navbar */
+  padding: 2rem 0;
+  box-sizing: border-box;
+  
+  /* Continuous Glassmorphism Matrix Formula */
+  background: rgba(13, 18, 27, 0.4) !important;
+  backdrop-filter: blur(20px) saturate(120%);
+  -webkit-backdrop-filter: blur(20px) saturate(120%);
+  
+  /* Clean matching perimeter framing */
+  border: 1px solid rgba(16, 185, 129, 0.1) !important;
+  border-radius: 40px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+}
+
+/* --- 3. SEAMLESS CONTENT SECTIONS --- */
+.floating-section {
+  width: 100%; /* Fully uses the continuous glass background footprint */
+  padding: 5rem 4rem; /* Comfortable padding between text sections */
+  box-sizing: border-box;
+  background: transparent !important; /* REPAIR: Vaporizes the individual card borders & separation gaps */
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0;
+  
+  /* Smooth pure fade presentation animation */
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Clean divider lines between sections instead of giant dark empty voids */
+.floating-section:not(:last-of-type) {
+  border-bottom: 1px solid rgba(16, 185, 129, 0.08) !important;
+}
+
+/* Active reveal state triggered by your Intersection Observer script */
+.floating-section.section-revealed {
+  opacity: 1;
+}
+
+/* Specific Hero positioning adjustments */
+.hero-section-adjust {
+  padding-top: 4rem;
+}
+
+/* --- 4. GLOBAL INTERFACE FOOTER --- */
+.global-footer {
+  width: 100%;
+  padding: 3rem 0;
+  text-align: center;
+  color: #4b5563;
+  font-size: 0.9rem;
+  font-family: monospace;
+  border-top: 1px solid rgba(16, 185, 129, 0.08);
+}
+
+/* --- 5. MOBILE RESPONSIVE OPTIMIZATION OVERRIDES --- */
+@media (max-width: 768px) {
+  .scroll-container {
+    width: 95%;
+    margin-top: 80px;
+    border-radius: 24px;
+  }
+  .floating-section {
+    padding: 3rem 1.5rem;
+  }
+}
