@@ -8,7 +8,7 @@ const projectsData = [
     desc: "Developed a mobile indoor navigation web application for our college campus that helps users locate classrooms, labs, offices, and facilities efficiently using interactive floor mapping and route guidance.",
     tags: ["HTML", "CSS", "JavaScript"],
     githubUrl: "https://github.com", 
-    liveUrl: "#" 
+    liveUrl:  "https://parvathy-algo.github.io/Indoor-navigation-app/"
   },
   {
     id: 2,
