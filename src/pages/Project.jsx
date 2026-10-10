@@ -16,7 +16,7 @@ const projectsData = [
     desc: "Developed a responsive web platform for showcasing internship programs and company services using modern frontend technologies and clean UI architecture.",
     tags: ["HTML", "CSS", "JavaScript","React"],
     githubUrl: "https://github.com",
-    liveUrl: "#"
+    liveUrl: "https://parvathy-algo.github.io/Student-management-system/"
   },
   {
     id: 3,
