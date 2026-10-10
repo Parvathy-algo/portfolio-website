@@ -1,16 +1,46 @@
-# React + Vite
+# My Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hi! I'm Parvathy, a final-year Computer Science Engineering student interested in web development and building useful applications.
 
-Currently, two official plugins are available:
+This repository contains my personal portfolio website, where I showcase my projects, technical skills, and learning journey.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Built With
 
-## React Compiler
+- React
+- JavaScript
+- HTML
+- CSS
+- Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 💻 Projects
 
-## Expanding the ESLint configuration
+### Indoor Navigation System
+A QR-code-based indoor navigation web application designed to help users navigate locations inside our college.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Technologies:** HTML, CSS, JavaScript, MapLibre GL JS
+- **Team size:** 4
+- **Live Demo:** [View Project](https://parvathy-algo.github.io/Indoor-navigation-app/)
+- **Source Code:** [GitHub Repository](https://github.com/Parvathy-algo/Indoor-navigation-app)
+
+## ⚙️ Run Locally
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Parvathy-algo/portfolio-website.git
+   ```
+2. Open the project folder:
+   ```bash
+   cd portfolio-website
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## 📬 Contact
+
+Feel free to explore my projects and connect with me!
